@@ -3,6 +3,7 @@ package org.acme;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.ws.rs.Path;
 
 /**
@@ -23,16 +24,17 @@ import javax.ws.rs.Path;
  *     }
  * }
  */
-@Path("/cadastro")
+
 @Entity
-public class MyEntity {
+@Table(name="MyEntity")
+public class MyEntity  {
+    @Id
     private Long id;
     private String nome;
     private Long idade;
     private String endereco;
 
-    @Id
-    @GeneratedValue
+
     public Long getId() {
         return id;
     }
