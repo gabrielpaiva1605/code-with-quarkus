@@ -4,7 +4,6 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Set;
 
@@ -22,12 +21,13 @@ public class PessoasResource {
     }
 
     @POST
-    public Response cadastrar(MyEntity myEntity){
-        return Response.ok().entity(myEntity).build();
+    public Set<MyEntity> add(MyEntity myEntity){
+        myEntities.add(myEntity);
+        return myEntities;
     }
 
     @PUT
-    public Response editar(MyEntity myEntity){
+    public Response edit(MyEntity myEntity){
         return Response.ok().entity(myEntity).build();
     }
 
@@ -37,12 +37,13 @@ public class PessoasResource {
     }
 
     @GET
-    public Response consultar(Long idMyEntity){
-        return null;
+    public Set<MyEntity> list(){
+        return myEntities;
     }
 
     @DELETE
-    public Response deletar(Long idMyEntity){
-        return null;
+    public Set<MyEntity> delete(MyEntity myEntity) {
+        myEntities.remove(myEntity);
+        return myEntities;
     }
 }
