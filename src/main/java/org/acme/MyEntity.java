@@ -34,6 +34,16 @@ public class MyEntity  {
     private Long idade;
     private String endereco;
 
+    public MyEntity() {
+    }
+
+    public MyEntity(String nome, String endereco, Long idade, Long id) {
+        this.nome = nome;
+        this.endereco = endereco;
+        this.idade = idade;
+        this.id = id;
+    }
+
 
     public Long getId() {
         return id;
@@ -45,8 +55,8 @@ public class MyEntity  {
     public String getNome() {
         return nome;
     }
-    public void setNome(String field) {
-        this.nome = field;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public Long getIdade() {
