@@ -10,7 +10,7 @@ public class Fruit {
     }
 
     public Fruit(String name, String descricao, Long id) {
-        this.nome = name;
+        this.nome = nome;
         this.descricao = descricao;
         this.id = id;
     }

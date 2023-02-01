@@ -13,7 +13,7 @@ import io.quarkus.test.junit.QuarkusTest;
 @QuarkusTest
 public class FruitResourceTest {
 
-    /*@Test
+    @Test
     public void testList() {
         given()
                 .when().get("/fruits")
@@ -47,7 +47,7 @@ public class FruitResourceTest {
                 .body("$.size()", is(2),
                         "nome", containsInAnyOrder("Maçã", "Abacaxi"),
                         "descricao", containsInAnyOrder("Fruta de inverno", "Fruta tropical"));
-    } */
+    }
 
 
 }
