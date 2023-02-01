@@ -1,14 +1,17 @@
 package org.acme.entity;
 
 public class Fruit {
-    public String name;
-    public String description;
+    public String nome;
+    public String descricao;
+
+    public Long id;
 
     public Fruit() {
     }
 
-    public Fruit(String name, String description) {
-        this.name = name;
-        this.description = description;
+    public Fruit(String name, String descricao, Long id) {
+        this.nome = name;
+        this.descricao = descricao;
+        this.id = id;
     }
 }
